@@ -176,11 +176,13 @@ body{
         align-items: center;
         text-align: center;
         background-color: #ffffff;  /* White background for each element */
-        padding: 30px;
+        padding: 20px; /* Reduced padding for smaller boxes */
         border-radius: 15px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         border: 2px solid #ddd; /* Light border for distinction */
+        width: 250px; /* Set a fixed width to ensure all boxes fit in one line */
+        margin: 10px; /* Reduced margin for better alignment */
     }
 
     .key_features_container:hover {
@@ -203,7 +205,7 @@ body{
 
     /* Heading Styling */
     .key_features_container h1 {
-        font-size: 24px;
+        font-size: 20px;  /* Reduced font size for the headings */
         color: #333;  /* Dark text for headings */
         margin-bottom: 15px;
         font-weight: bold;
@@ -212,7 +214,7 @@ body{
 
     /* Paragraph Styling */
     .key_features_container p {
-        font-size: 16px;
+        font-size: 14px;  /* Smaller font size for the paragraph */
         color: #666;  /* Light gray text for descriptions */
         line-height: 1.6;
         margin-bottom: 0;
@@ -221,9 +223,10 @@ body{
     /* Flex Layout */
     .d-flex {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;  /* Ensures all items stay in a single row */
         justify-content: center;
         gap: 20px;  /* Adds spacing between the elements */
+        overflow-x: auto; /* Allows horizontal scrolling if content overflows */
     }
 
     .justify-content-center {
@@ -233,8 +236,8 @@ body{
     /* Responsive Design */
     @media (max-width: 768px) {
         .key_features_container {
+            width: 100%;  /* Full width on smaller screens */
             margin-bottom: 20px;
-            width: 100%;
         }
 
         .d-flex {
@@ -245,32 +248,97 @@ body{
 
 
 
-.How_it_works_container{
-    margin-right:130px;
-    margin-top:130px;
-    padding:50px 0 50px 130px;
-    background-color:Annabel;
-}
-
-.How_it_works_container h1{
-    color:black;
-    font-size:35px;
-    font-weight: 600;
-}
-
-.How_it_works_container_elements i{
-    font-size: 25px;
-    color:#347273 ;
-}
-
-.How_it_works_container_elements h1{
-    font-size:18px;
-    font-weight: 400;
-}
-
-.How_it_works_container_elements p{
-    color:grey;
-}
+    #HowItWorks {
+        background-color: #f7f7f7; /* Light background color for the section */
+        padding: 60px 20px; /* Top and bottom padding for better spacing */
+    }
+    
+    .container {
+        max-width: 1200px; /* Limit the maximum width */
+        margin: 0 auto; /* Center the container */
+        padding: 0 20px; /* Horizontal padding for responsiveness */
+    }
+    
+    .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .section-header h1 {
+        font-size: 40px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    
+    .section-header .subheading {
+        font-size: 18px;
+        color: #777;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .steps-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px; /* Increased space between steps */
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        margin-top: 40px;
+    }
+    
+    .step {
+        background-color: #fff; /* White background for each step */
+        padding: 30px;
+        width: 30%; /* Default width for desktop view */
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+        border-radius: 12px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        border: 1px solid #e0e0e0; /* Soft border around each step */
+        margin-bottom: 30px; /* Space between steps when wrapping */
+    }
+    
+    /* Hover effect for each step */
+    .step:hover {
+        transform: translateY(-8px); /* Lift the box on hover */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Darker shadow for hover effect */
+    }
+    
+    .step-icon {
+        font-size: 45px; /* Larger icons for visibility */
+        color: #007bff; /* Blue color for the icons */
+        margin-bottom: 20px; /* Space between icon and heading */
+    }
+    
+    .step h2 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 15px;
+    }
+    
+    .step p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+    
+    /* Mobile responsiveness: Stack the boxes vertically on smaller screens */
+    @media (max-width: 768px) {
+        .step {
+            width: 100%; /* Full-width steps on smaller screens */
+            margin-bottom: 30px; /* Add space between stacked steps */
+        }
+    
+        .section-header h1 {
+            font-size: 32px; /* Adjust heading font size for mobile */
+        }
+    
+        .section-header .subheading {
+            font-size: 16px; /* Adjust subheading font size for mobile */
+        }
+    }
 
 .faq_heading{
     text-align: start;
